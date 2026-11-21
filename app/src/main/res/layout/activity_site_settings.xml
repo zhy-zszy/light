@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="网站设置" />
+    <TextView
+        android:id="@+id/tv_site_host"
+        android:textSize="14sp"
+        android:textColor="@color/gray"
+        android:paddingBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="网站: " />
+    <CheckBox
+        android:id="@+id/cb_javascript"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="启用 JavaScript"
+        android:checked="true" />
+    <CheckBox
+        android:id="@+id/cb_dom_storage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="启用 DOM Storage"
+        android:checked="true" />
+    <CheckBox
+        android:id="@+id/cb_allow_images"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="允许加载图片"
+        android:checked="true" />
+    <CheckBox
+        android:id="@+id/cb_allow_popup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="允许弹窗"
+        android:checked="false" />
+    <CheckBox
+        android:id="@+id/cb_desktop_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="桌面模式"
+        android:checked="false" />
+    <CheckBox
+        android:id="@+id/cb_safe_browsing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="安全浏览"
+        android:checked="true" />
+    <View
+        android:background="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+    <Button
+        android:id="@+id/btn_save_site_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="保存设置" />
+    <Button
+        android:id="@+id/btn_reset_site_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="恢复默认" />
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="返回" />
+</LinearLayout>

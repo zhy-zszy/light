@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开发者模式" />
+
+    <TextView
+        android:textSize="12sp"
+        android:textColor="@color/gray"
+        android:paddingBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="高级调试功能，普通用户请勿随意修改。" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"
+                android:paddingTop="8dp"
+                android:paddingBottom="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="基础开关" />
+
+            <CheckBox
+                android:id="@+id/cb_dev_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="启用开发者模式"
+                android:checked="false" />
+
+            <CheckBox
+                android:id="@+id/cb_log_enabled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="启用日志记录"
+                android:checked="false" />
+
+            <CheckBox
+                android:id="@+id/cb_inspect_enabled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="启用WebView调试 (chrome://inspect)"
+                android:checked="false" />
+
+            <View
+                android:background="@color/gray"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"
+                android:paddingBottom="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="页面控制" />
+
+            <CheckBox
+                android:id="@+id/cb_block_images"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="禁用图片加载"
+                android:checked="false" />
+
+            <CheckBox
+                android:id="@+id/cb_block_js"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="禁用JavaScript"
+                android:checked="false" />
+
+            <CheckBox
+                android:id="@+id/cb_force_desktop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="强制桌面模式"
+                android:checked="false" />
+
+            <CheckBox
+                android:id="@+id/cb_console_log"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="拦截控制台日志"
+                android:checked="false" />
+
+            <CheckBox
+                android:id="@+id/cb_network_log"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="记录网络请求"
+                android:checked="false" />
+
+            <View
+                android:background="@color/gray"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"
+                android:paddingBottom="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="自定义User-Agent" />
+
+            <EditText
+                android:id="@+id/et_custom_ua"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="输入自定义UA，留空则使用默认"
+                android:textSize="12sp"
+                android:singleLine="false"
+                android:minLines="2"
+                android:gravity="top" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn_save_ua"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="保存UA"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btn_test_ua"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="测试UA"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <View
+                android:background="@color/gray"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"
+                android:paddingBottom="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="调试工具" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn_inject_js"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="注入JS"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btn_view_source"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="查看源码"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn_view_log"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="查看日志"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btn_export_log"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="导出日志"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn_clear_log"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="清空日志"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btn_clear_dev_cache"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="清除缓存"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <View
+                android:background="@color/gray"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"
+                android:paddingBottom="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="设备信息" />
+
+            <TextView
+                android:id="@+id/tv_dev_info"
+                android:textSize="11sp"
+                android:textColor="@color/gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="加载中..." />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="24dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_dev_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="返回" />
+</LinearLayout>

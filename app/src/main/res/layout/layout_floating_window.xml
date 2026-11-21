@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/floating_container"
+    android:background="@color/white"
+    android:layout_width="300dp"
+    android:layout_height="400dp">
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/floating_title_bar"
+        android:background="@color/primary"
+        android:layout_width="match_parent"
+        android:layout_height="36dp">
+
+        <TextView
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:paddingLeft="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="LightBrowser"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/floating_menu_btn"
+            android:background="?android:selectableItemBackground"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@android:drawable/ic_menu_more"
+            android:contentDescription="@string/menu" />
+
+        <ImageButton
+            android:id="@+id/floating_resize_btn"
+            android:background="?android:selectableItemBackground"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@android:drawable/ic_menu_crop"
+            android:contentDescription="resize" />
+
+        <ImageButton
+            android:id="@+id/floating_close_btn"
+            android:background="?android:selectableItemBackground"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:contentDescription="close" />
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/floating_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="36dp" />
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:background="@color/light_gray"
+        android:layout_width="match_parent"
+        android:layout_height="36dp">
+
+        <ImageButton
+            android:id="@+id/floating_back"
+            android:background="?android:selectableItemBackground"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@android:drawable/ic_media_previous"
+            android:contentDescription="@string/back" />
+
+        <ImageButton
+            android:id="@+id/floating_forward"
+            android:background="?android:selectableItemBackground"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@android:drawable/ic_media_next"
+            android:contentDescription="@string/forward" />
+
+        <ImageButton
+            android:id="@+id/floating_refresh"
+            android:background="?android:selectableItemBackground"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@android:drawable/ic_popup_sync"
+            android:contentDescription="@string/refresh" />
+
+        <EditText
+            android:textSize="12sp"
+            android:id="@+id/floating_address"
+            android:background="@android:drawable/edit_text"
+            android:paddingLeft="4dp"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:hint="@string/search_hint"
+            android:singleLine="true"
+            android:layout_weight="1"
+            android:imeOptions="actionGo" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="用户脚本管理" />
+    <TextView
+        android:textSize="12sp"
+        android:paddingBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="将JS脚本文件放入 /sdcard/LightBrowser/scripts/ 目录下，应用会自动加载。" />
+    <Button
+        android:id="@+id/btn_refresh_scripts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="刷新脚本列表" />
+    <ListView
+        android:id="@+id/lv_scripts"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>

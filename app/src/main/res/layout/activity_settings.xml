@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 基础设置 -->
+        <TextView android:text="基础设置" android:textSize="14sp" android:textColor="#2196F3" android:textStyle="bold" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <LinearLayout android:orientation="vertical" android:background="#FFFFFF" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <EditText android:id="@+id/et_homepage" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="默认主页" android:singleLine="true" />
+            <Button android:id="@+id/btn_save_homepage" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="保存主页" android:layout_marginTop="8dp" />
+            <View android:background="#EEEEEE" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" />
+            
+            <TextView android:text="默认搜索引擎" android:textSize="16sp" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <RadioGroup android:id="@+id/rg_search_engine" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+                <RadioButton android:id="@+id/rb_bing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bing" />
+                <RadioButton android:id="@+id/rb_baidu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:text="百度" />
+                <RadioButton android:id="@+id/rb_google" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:text="Google" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- 网页与交互 -->
+        <TextView android:text="网页与交互" android:textSize="14sp" android:textColor="#2196F3" android:textStyle="bold" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <LinearLayout android:orientation="vertical" android:background="#FFFFFF" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:text="字体大小" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" />
+                <Button android:id="@+id/btn_text_small" android:text="小" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="0dp" android:minHeight="0dp" android:padding="8dp"/>
+                <Button android:id="@+id/btn_text_normal" android:text="中" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="0dp" android:minHeight="0dp" android:padding="8dp"/>
+                <Button android:id="@+id/btn_text_large" android:text="大" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="0dp" android:minHeight="0dp" android:padding="8dp"/>
+            </LinearLayout>
+            <View android:background="#EEEEEE" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="8dp" android:layout_marginBottom="8dp" />
+            
+            <CheckBox android:id="@+id/cb_block_images" android:text="无图模式 (省流加速)" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <CheckBox android:id="@+id/cb_force_zoom" android:text="强制缩放网页" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <CheckBox android:id="@+id/cb_volume_scroll" android:text="音量键翻页 (按音量下键滑动网页)" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <CheckBox android:id="@+id/cb_keep_screen_on" android:text="保持屏幕常亮" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- 隐私与安全 -->
+        <TextView android:text="隐私与安全" android:textSize="14sp" android:textColor="#2196F3" android:textStyle="bold" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <LinearLayout android:orientation="vertical" android:background="#FFFFFF" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <CheckBox android:id="@+id/cb_incognito" android:text="无痕模式 (不记录历史和Cookies)" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <CheckBox android:id="@+id/cb_clear_on_exit" android:text="退出浏览器时自动清理缓存" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- 数据清理 -->
+        <TextView android:text="数据清理" android:textSize="14sp" android:textColor="#2196F3" android:textStyle="bold" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <LinearLayout android:orientation="vertical" android:background="#FFFFFF" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:id="@+id/btn_clear_cache" android:text="清除缓存文件" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <Button android:id="@+id/btn_clear_cookies" android:text="清除Cookies" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" />
+            <Button android:id="@+id/btn_clear_history" android:text="清除历史记录" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" />
+            <Button android:id="@+id/btn_clear_data" android:text="恢复出厂设置 (清除所有数据)" android:textColor="#F44336" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <TextView android:text="LightBrowser v7.0\n全功能增强版" android:textSize="12sp" android:textColor="#999999" android:gravity="center" android:padding="24dp" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

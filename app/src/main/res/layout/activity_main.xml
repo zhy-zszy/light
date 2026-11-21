@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:background="@android:color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/webview_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- 新增：视频全屏容器 -->
+    <FrameLayout
+        android:id="@+id/fullscreen_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_gravity="top"
+        android:layout_marginTop="72dp"
+        android:max="100"
+        android:progress="0"
+        android:visibility="gone"
+        android:progressDrawable="@drawable/progress_horizontal" />
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/address_bar"
+        android:background="@drawable/glass_gradient_bg"
+        android:elevation="8dp"
+        android:padding="6dp"
+        android:layout_margin="8dp"
+        android:layout_gravity="top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/btn_site_settings"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_settings"
+            android:contentDescription="网站设置" />
+
+        <EditText
+            android:textSize="@dimen/text_size_normal"
+            android:id="@+id/et_address"
+            android:background="@android:color/transparent"
+            android:paddingLeft="@dimen/padding_normal"
+            android:paddingRight="@dimen/padding_normal"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:hint="@string/search_hint"
+            android:singleLine="true"
+            android:layout_weight="1"
+            android:textColorHint="#808080"
+            android:imeOptions="actionGo" />
+
+        <ImageButton
+            android:id="@+id/btn_go"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_arrow_forward"
+            android:contentDescription="@string/go" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/find_bar"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/glass_gradient_bg"
+        android:elevation="8dp"
+        android:padding="4dp"
+        android:layout_margin="8dp"
+        android:layout_marginBottom="80dp"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+        <!-- ...保持原有内容... -->
+        <EditText
+            android:id="@+id/et_find"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:hint="@string/find_hint"
+            android:singleLine="true"
+            android:background="@android:color/transparent"
+            android:paddingLeft="8dp"
+            android:imeOptions="actionSearch" />
+        <ImageButton
+            android:id="@+id/btn_find_prev"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_find_prev" />
+        <ImageButton
+            android:id="@+id/btn_find_next"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_find_next" />
+        <ImageButton
+            android:id="@+id/btn_find_close"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_close" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/bottom_bar"
+        android:background="@drawable/glass_gradient_bg"
+        android:elevation="8dp"
+        android:padding="4dp"
+        android:layout_margin="8dp"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="@string/back" />
+
+        <ImageButton
+            android:id="@+id/btn_forward"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_arrow_forward"
+            android:contentDescription="@string/forward" />
+
+        <ImageButton
+            android:id="@+id/btn_refresh"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_refresh"
+            android:contentDescription="@string/refresh" />
+
+        <ImageButton
+            android:id="@+id/btn_home"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_home"
+            android:contentDescription="@string/homepage" />
+
+        <ImageButton
+            android:id="@+id/btn_bookmark"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_star_border"
+            android:contentDescription="@string/add_bookmark" />
+
+        <ImageButton
+            android:id="@+id/btn_tab_manager"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_tab"
+            android:contentDescription="@string/tab_manager" />
+
+        <ImageButton
+            android:id="@+id/btn_menu"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_menu"
+            android:contentDescription="@string/menu" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/fab_menu"
+        android:background="@drawable/glass_fab"
+        android:elevation="12dp"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_gravity="bottom|right"
+        android:src="@drawable/ic_menu"
+        android:contentDescription="@string/menu" />
+</FrameLayout>
